@@ -1,0 +1,15 @@
+{% autoescape off %}
+Hi {{ user.first_name }},
+
+Thank you for your order, {{ order.first_name }}!
+
+Your order has been successfully placed.
+
+Order Number: {{ order.order_number }}
+Total Amount: ₹{{ order.order_total }}
+
+We’ll notify you when your items are shipped.
+
+Regards,  
+GreatCart Team
+{% endautoescape %}

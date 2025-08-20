@@ -1,0 +1,154 @@
+<!-- ========================= FUTURISTIC FOOTER ========================= -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Logo & About -->
+    <div class="footer-section about">
+      <h2>GreatKart</h2>
+      <p>Curated products, fast delivery, and a futuristic shopping experience. Join the trendsetters today.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-envelope"></i> greatkart.io</p>
+      <p><i class="fas fa-phone"></i> +879-332-9375</p>
+      <p><i class="fas fa-map-marker-alt"></i> 123 Street Name, Avenue ABC</p>
+      <div class="cards">
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-cc-mastercard"></i>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 GreatKart. All rights reserved.
+  </div>
+</footer>
+
+<!-- FontAwesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+<!-- ========================= CSS ========================= -->
+<style>
+body {
+	color: #000;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer {
+  background: #fff;
+  color: #000;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  flex: 1 1 250px;
+  margin: 10px;
+}
+
+.footer h2, .footer h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer p, .footer li, .footer a {
+  color: #000;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #4f46e5; /* neon-indigo hover */
+  transition: 0.3s;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #000;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #4f46e5;
+  transform: translateY(-4px);
+}
+
+.footer-section.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section.links li {
+  margin: 8px 0;
+}
+
+.footer-section.contact .cards i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #0c0c0cff;
+  transition: 0.3s;
+}
+
+.footer-section.contact .cards i:hover {
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding: 15px 0;
+  color: #777;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .social-icons a {
+    margin-right: 15px;
+  }
+}
+</style>

@@ -1,0 +1,179 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- ========================= HERO SECTION END ========================= -->
+
+<section class="hero">
+
+
+  
+    <img src="{% static './images/banners/download.png' %}" alt="Hero Image" style="width:100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+  
+</section>
+<!-- ========================= SECTION POPULAR PRODUCTS ========================= -->
+<section class="section-name py-5">
+  <div class="container">
+
+    <!-- Header -->
+    <header class="d-flex justify-content-between align-items-center mb-4">
+      <h3 class="section-title mb-0">🔥 Popular Products</h3>
+      <a href="{% url 'store' %}" class="btn btn-outline-primary btn-sm">See all</a>
+    </header>
+
+    <!-- Product Grid -->
+     <!-- Product Grid -->
+<div class="row g-4">
+  {% for product in products %}
+  <div class="col-md-3 col-sm-6 d-flex">
+    <div class="card card-product-grid border-0 shadow-sm h-100 w-100 mb-4">
+      
+      <!-- Image -->
+      <a href="{{ product.get_url }}" class="img-wrap bg-light d-flex align-items-center justify-content-center" style="height:220px;">
+        <img src="{{ product.images.url }}" class="img-fluid" style="max-height:200px; object-fit:contain;" alt="{{ product.product_name }}">
+      </a>
+      
+      <!-- Info -->
+      <figcaption class="info-wrap p-3 d-flex flex-column">
+        <a href="{{ product.get_url }}" class="title text-dark fw-semibold small mb-2">{{ product.product_name }}</a>
+        <div class="price text-primary fw-bold mb-2">$ {{ product.price }}</div>
+        
+        <!-- Star Rating -->
+        <div class="rating-star text-warning small">
+          <span>
+            <i class="fa fa-star{% if product.averageReview < 0.5 %}-o{% elif product.averageReview < 1 %}-half-o{% endif %}"></i>
+            <i class="fa fa-star{% if product.averageReview < 1.5 %}-o{% elif product.averageReview < 2 %}-half-o{% endif %}"></i>
+            <i class="fa fa-star{% if product.averageReview < 2.5 %}-o{% elif product.averageReview < 3 %}-half-o{% endif %}"></i>
+            <i class="fa fa-star{% if product.averageReview < 3.5 %}-o{% elif product.averageReview < 4 %}-half-o{% endif %}"></i>
+            <i class="fa fa-star{% if product.averageReview < 4.5 %}-o{% elif product.averageReview < 5 %}-half-o{% endif %}"></i>
+          </span>
+        </div>
+      </figcaption>
+    </div>
+  </div>
+  {% endfor %}
+</div> <!-- row // -->
+
+    <!-- row // -->
+  </div>
+</section>
+<!-- ========================= SECTION END ========================= -->
+
+
+<!-- ========================= CUSTOM STYLES ========================= -->
+<style>
+/* HERO */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+}
+.hero-bg img {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(to bottom right, rgba(0,0,0,0.6), rgba(0,0,0,0.4));
+  z-index: -1;
+}
+.text-gradient {
+  background: linear-gradient(90deg, #007bff, #00e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #00e0ff);
+  border: none;
+}
+.btn-primary:hover {
+  background: linear-gradient(90deg, #0056d6, #00b4cc);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* PRODUCTS */
+
+/* Extra spacing between products */
+.card-product-grid {
+  margin-bottom: 20px; /* vertical spacing */
+  border-radius: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.row.g-4 > [class*="col-"] {
+  margin-bottom: 30px; /* ensures proper vertical gap on smaller screens */
+}
+
+.card-product-grid:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+
+.img-wrap img {
+  transition: transform 0.3s ease-in-out;
+}
+.img-wrap:hover img {
+  transform: scale(1.05);
+}
+.rating-star i {
+  margin-right: 2px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  
+    background-color: #f9fafb;
+    position: relative;
+    overflow: hidden;
+    padding-top: 10px;
+  }
+
+  @media(min-width: 768px) {
+    .hero {
+      flex-direction: row;
+      padding: 100px 50px;
+    }
+  }
+
+  .hero-image {
+    max-width: 500px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  @media(min-width: 768px) {
+    .hero-image {
+      margin-bottom: 0;
+      margin-left: 50px;
+    }
+  }
+
+ 
+</style>
+
+{% endblock %}

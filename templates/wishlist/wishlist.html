@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container my-4">
+  <h2 class="mb-4">My Wishlist</h2>
+
+  {% if items %}
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 justify-content-start">
+    {% for item in items %}
+      <div class="col" style="max-width: 250px;">
+        <div class="card h-100 shadow-sm">
+          <a href="{% url 'product_detail' item.product.category.slug item.product.slug %}">
+            <img src="{{ item.product.images.url }}" 
+                 class="card-img-top" 
+                 alt="{{ item.product.product_name }}"
+                 style="height:180px; object-fit:contain;">
+          </a>
+          <div class="card-body p-2 text-center">
+            <h6 class="card-title mb-1">
+              <a href="{% url 'product_detail' item.product.category.slug item.product.slug %}" 
+                 class="text-dark text-decoration-none">
+                {{ item.product.product_name|truncatechars:25 }}
+              </a>
+            </h6>
+            {% if item.variations.all %}
+              <div class="mb-1">
+                {% for var in item.variations.all %}
+                  <span class="badge bg-secondary small">{{ var.variation_category }}: {{ var.variation_value }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="text-primary fw-bold mb-2">
+              ${{ item.product.price }}
+            </div>
+            <a href="{% url 'remove_from_wishlist' item.product.id %}" 
+               class="btn btn-sm btn-outline-danger">
+               <i class="fa fa-trash"></i> Remove
+            </a>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+</div>
+{% endblock %}
