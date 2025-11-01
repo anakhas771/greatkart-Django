@@ -1,5 +1,5 @@
 
-#  GreatCart E-Commerce Website 
+#  Greatkart E-Commerce Website 
 
  Developed a full-stack e-commerce platform using Django (REST Framework) for seamless product browsing, cart
  management, and checkout.
