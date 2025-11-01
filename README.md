@@ -21,7 +21,7 @@ Nova Health Center – for managing patient authentication and report delivery.
 
 ## Tech Stack
 
-Frontend: React, React Router, Axios, Tailwind CSS
+Frontend: Javascript, React, React Router, Axios, Tailwind CSS
 
 Backend: Django, Django REST Framework
 
