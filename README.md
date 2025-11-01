@@ -7,7 +7,6 @@
  Developed a shopping cart system supporting session persistence, quantity updates, and real-time total calculation.
  Integrated PayPal payment gateway for secure and reliable transaction processing
 
-
 ## Tech Stack
 
 Frontend: Javascript, React, React Router, Axios, Tailwind CSS
