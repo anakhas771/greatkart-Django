@@ -9,7 +9,7 @@
 
 ## Tech Stack
 
-Frontend: Javascript, React, React Router, Axios, Tailwind CSS
+Frontend: Javascript, React, React Router, Axios, Tailwind CSS, HTML, CSS
 
 Backend: Django, Django REST Framework
 
