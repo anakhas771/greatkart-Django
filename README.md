@@ -1,25 +1,37 @@
+# 🛒 Greatkart – Full-Stack E-Commerce Website
 
-#  Greatkart E-Commerce Website 
+A fully featured modern e-commerce platform built using **Django REST Framework** and **React**, supporting product browsing, advanced filtering, shopping cart management, secure payments, and user authentication.
 
- Developed a full-stack e-commerce platform using Django (REST Framework) for seamless product browsing, cart
- management, and checkout.
- Added advanced product filtering features by category, size, color, and price to improve user experience and navigation.
- Developed a shopping cart system supporting session persistence, quantity updates, and real-time total calculation.
- Integrated PayPal payment gateway for secure and reliable transaction processing
+---
 
-## Tech Stack
+## 🚀 Features
 
-Frontend: Javascript, React, React Router, Axios, Tailwind CSS, HTML, CSS
+✅ User authentication with JWT (Register, Login, Email Verification, Password Reset)  
+✅ Browse products with advanced filters (Category, Size, Color, Price, etc.)  
+✅ Shopping cart with session persistence & quantity updates  
+✅ Real-time order total calculation & checkout flow  
+✅ PayPal payment gateway integration for secure transactions  
+✅ Product search, sorting & responsive UI  
+✅ Admin dashboard for product & order management  
+✅ Email notification system (SMTP)  
+✅ Analytics & visual charts using Recharts  
 
-Backend: Django, Django REST Framework
+---
 
-Database: PostgreSQL 
+## 🛠 Tech Stack
 
-Authentication & Security: JWT, SMTP (for email verification and password reset)
+| Layer | Technology |
+|-------|------------|
+| **Frontend** | React, JavaScript, React Router, Axios, Tailwind CSS, HTML, CSS |
+| **Backend** | Django, Django REST Framework |
+| **Database** | PostgreSQL |
+| **Authentication** | JSON Web Tokens (JWT) |
+| **Email Services** | SMTP (for verification & reset) |
+| **Payments** | PayPal REST API |
+| **Charts & Analytics** | Recharts |
+| **Version Control** | Git & GitHub |
 
-Payments: PayPal REST API
+---
 
-Analytics & Charts: Recharts
 
-Version Control: Git & GitHub
 
