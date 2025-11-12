@@ -3,7 +3,6 @@
 A fully featured modern e-commerce platform built using **Django REST Framework** and **React**, supporting product browsing, advanced filtering, shopping cart management, secure payments, and user authentication.
 
 ---
-
 ## 🚀 Features
 
 ✅ User authentication with JWT (Register, Login, Email Verification, Password Reset)  
